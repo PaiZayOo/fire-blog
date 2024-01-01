@@ -4,7 +4,8 @@
         <hr>
         <Content/>
         <hr>
-        <BlogPost/>
+        <BlogCard/>
+        
 
     </div>
 </template>
@@ -12,14 +13,15 @@
 <script>
  import HeroSection from '@/components/HeroSection.vue';
 import Content from '@/components/Content.vue';
-import BlogPost from '@/components/BlogPost.vue';
+import BlogCard from '@/components/BlogCard.vue';
+
 
 export default {
     name: 'FireBlogHome',
     components: {
         HeroSection,
         Content,
-        BlogPost
+        BlogCard,
     },
 
     data() {
