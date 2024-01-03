@@ -4,7 +4,6 @@ import Home from '../views/Home.vue'
 import Blogs from "../views/Blogs.vue";
 import LogIn from "../views/LogIn.vue";
 import Register from "../views/Register.vue";
-import ForgetPw from "../views/ForgetPw.vue";
 
 Vue.use(VueRouter)
 
@@ -29,11 +28,7 @@ const routes = [
     name: "Register",
     component: Register,
   },
-  {
-    path: "/forget-pw",
-    name: "ForgetPw",
-    component: ForgetPw,
-  },
+  
 ];
 
 const router = new VueRouter({

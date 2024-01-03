@@ -24,9 +24,14 @@ export default {
 
   },
   created() {
-    setTimeout(() => {
-        console.log(firebase.auth().currentUser.uid);
-    }, 2000);
+    firebase.auth().onAuthStateChanged((user) => {
+      this.$store.commit("updateUser", user);
+      if (user) {
+        this.$store.dispatch("getCurrentUser");
+         console.log(this.$store.state.profileEmail);
+      }
+    });
+
     this.routeCheck();
   },
 
@@ -35,7 +40,7 @@ export default {
       showNavFooter: null
     };
   },
-  
+
 
   methods: {
     routeCheck() {
@@ -45,7 +50,7 @@ export default {
         this.showNavFooter = false;
       } else if (
         this.$route.name === 'Home' ||
-        this.$route.name === 'Blogs' 
+        this.$route.name === 'Blogs'
       ) {
         this.showNavFooter = true;
       }

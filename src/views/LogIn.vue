@@ -30,9 +30,7 @@
                             Don't have an account?
                             <router-link to="/register" class="btn btn-primary ">Register Account</router-link>
                         </div>
-                        <div class=" text-center  mt-4">
-                            <router-link to="/ForgetPw" class=" text-white">Forget Password?</router-link>
-                        </div>
+                        
                     </div>
 
                 </form>
